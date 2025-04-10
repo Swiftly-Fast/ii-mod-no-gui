@@ -17,12 +17,12 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.3.1
 
-    - name: Build Project
+    - name: Build Project (Release)
       run: |
         msbuild iiMenu.sln /p:Configuration=Release
 
     - name: Upload DLL Artifact
-      uses: actions/upload-artifact@v2.3.0  # Switched to v2.3.0 for stability
+      uses: actions/upload-artifact@v2
       with:
         name: Mod DLL
         path: |
