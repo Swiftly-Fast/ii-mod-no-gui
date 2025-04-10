@@ -22,8 +22,8 @@ jobs:
         msbuild iiMenu.sln /p:Configuration=Release
 
     - name: Upload DLL Artifact
-      uses: actions/upload-artifact@v2  # Switched to v2 for stability
+      uses: actions/upload-artifact@v2.3.0  # Switched to v2.3.0 for stability
       with:
         name: Mod DLL
         path: |
-          **/bin/Release/*.dll  # Changed backslashes to forward slashes for better compatibility
+          **/bin/Release/*.dll
